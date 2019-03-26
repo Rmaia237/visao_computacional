@@ -22,6 +22,33 @@ cv2.destroyAllWindows()
 #--------------------
 
 import numpy as np
+import cv2
+img = np.zeros((512,512,3),np.uint8)
+cv2.line(img,(73,73),(436,436),(255,255,255),5) # \
+cv2.line(img,(0,255),(511,255),(255,255,255),5) # horizontal principal
+cv2.line(img,(73,436),(436,73),(255,255,255),5) # /
+cv2.line(img,(255,0),(255,511),(255,255,255),5) # vertical principal
+
+cv2.line(img,(255,0),(73,436),(255,255,255),5)
+cv2.line(img,(255,0),(436,436),(255,255,255),5)
+
+cv2.line(img,(255,511),(73,73),(255,255,255),5)
+cv2.line(img,(255,511),(436,73),(255,255,255),5)
+
+cv2.line(img,(0,255),(436,73),(255,255,255),5)
+cv2.line(img,(0,255),(436,436),(255,255,255),5)
+
+cv2.line(img,(511,255),(73,73),(255,255,255),5)
+cv2.line(img,(511,255),(73,436),(255,255,255),5)
+
+cv2.imshow("img",img)
+cv2.waitKey(0)
+cv2.destroyAllWindows()
+
+
+#--------------------
+
+import numpy as np
 import matplotlib.pyplot as plt
 
 x = np.arange(0,5,0.1)
